@@ -10,6 +10,7 @@
 </tr>
 <tr>
 <td valign="top">
+<a href="#10.15.0">10.15.0</a><br/>
 <a href="#10.14.2">10.14.2</a><br/>
 <a href="#10.14.1">10.14.1</a><br/>
 <a href="#10.14.0">10.14.0</a><br/>
@@ -46,6 +47,26 @@
   * [0.10.x](CHANGELOG_V010.md)
   * [io.js](CHANGELOG_IOJS.md)
   * [Archive](CHANGELOG_ARCHIVE.md)
+
+<a id="10.15.0"></a>
+## 2018-12-26, Version 10.15.0 'Dubnium' (LTS), @MylesBorins
+
+The 10.14.0 security release introduced some unexpected breakages on the 10.x release line.
+This is a special release to fix a regression in the HTTP binary upgrade response body and add
+a missing CLI flag to adjust the max header size of the http parser.
+
+### Notable Changes
+
+* **cli**: add --max-http-header-size flag (cjihrig) [#24811](https://github.com/nodejs/node/pull/24811)
+
+### Commits
+
+* [[`1be1f5b2c7`](https://github.com/nodejs/node/commit/1be1f5b2c7)] - **cli**: add --max-http-header-size flag (cjihrig) [#24811](https://github.com/nodejs/node/pull/24811)
+* [[`62e0ea41e5`](https://github.com/nodejs/node/commit/62e0ea41e5)] - **deps**: cherry-pick http\_parser\_set\_max\_header\_size (cjihrig) [#24811](https://github.com/nodejs/node/pull/24811)
+* [[`89586506bf`](https://github.com/nodejs/node/commit/89586506bf)] - **http**: fix regression of binary upgrade response body (Matteo Collina) [#25039](https://github.com/nodejs/node/pull/25039)
+* [[`9f8f23f8b8`](https://github.com/nodejs/node/commit/9f8f23f8b8)] - **src**: add kUInteger parsing (Matteo Collina) [#24811](https://github.com/nodejs/node/pull/24811)
+* [[`951306245f`](https://github.com/nodejs/node/commit/951306245f)] - **src**: cache the result of GetOptions() in JS land (Joyee Cheung) [#24091](https://github.com/nodejs/node/pull/24091)
+* [[`ba5e25eb61`](https://github.com/nodejs/node/commit/ba5e25eb61)] - **test**: fix expectation in test-bootstrap-modules (Ali Ijaz Sheikh) [#25112](https://github.com/nodejs/node/pull/25112)
 
 <a id="10.14.2"></a>
 ## 2018-12-11, Version 10.14.2 'Dubnium' (LTS), @MylesBorins prepared by @codebytere
